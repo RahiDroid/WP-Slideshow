@@ -22,7 +22,7 @@ function mss_render_settings_page() {
     global $slides_options;
     $number_of_images = $slides_options[ 'images_number' ];
     $urls = explode( ";", $slides_options[ 'image_urls' ] );
-
+    
     if(function_exists( 'wp_enqueue_media' )){
         wp_enqueue_media();
     }else{
@@ -30,18 +30,20 @@ function mss_render_settings_page() {
         wp_enqueue_script('media-upload');
         wp_enqueue_script('thickbox');
     }
-
+    
     ?>
         <form id="settings_form" method="post" action="options.php">
-    <?php
+            <?php
         settings_fields( 'mss-settings-group' );
-    ?>
+        ?>
             <div class="settings-wrapper">
                 
                 <div class="header">
                     <h2>My Slide Show Control Panel</h2>
                     <span>v1.0.3</span>
                 </div>
+
+                <span><i>Recommended image dimensions: 1000 X 560</i></span>
                 
                 <div id="images-container">
                     <div id="add-image" class="image disable-sort-item">
@@ -63,7 +65,6 @@ function mss_render_settings_page() {
 
                 <div class="footer">
                     <span><i><b>Tip: </b>You can drag images to change their order in the slide show!</i></span>
-                    <span><i>Recommended image dimensions: 1000px x 560px</i></span>
                     <button id="btn-save" class="button-primary">Save Changes</button>
                 </div>
 
@@ -92,7 +93,7 @@ function render_mss_shortcode() {
     }
 
     $image_urls = explode( ";", $slides_options[ 'image_urls' ] );
-    $html .= '<div id="slides-container">';
+    $html .= '<div class="mss-slides-container">';
     $html .= '<img class="static-bg" src="'. plugins_url( 'assets/images/default-bg.png' , dirname( __FILE__ ) ) . '"/>';
 
     for ( $i = 0; $i < $number_of_images; $i++ ) {

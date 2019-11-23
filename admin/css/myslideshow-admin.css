@@ -13,6 +13,12 @@
     background: #FFF;
 }
 
+.settings-wrapper>span {
+    margin-top: 12px;
+    margin-left: 30px;
+    display: block;
+}
+
 .header {
     background: #222222;
 }
@@ -133,6 +139,5 @@
 
 .footer span {
     margin-left: 30px;
-    margin-top: 8px;
     display: block;
 }

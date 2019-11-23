@@ -1,11 +1,15 @@
-#slides-container {
+.mss-slides-container {
     position: relative;
+    margin: 20px 0;
 }
 
-#slides-container .slide {
+.mss-slides-container .slide {
     position: absolute;
     left: 0; top: 0;
+    -ms-transform: scaleX(0);
+    -moz-transform: scaleX(0);
     transform: scaleX(0);
+    -moz-transition: 0.3s transform linear;
     transition: 0.3s transform linear;
     transform-origin: left;
     height: 100%;
@@ -13,14 +17,13 @@
     object-position: center;
 }
 
-#slides-container .static-bg {
+.mss-slides-container .static-bg {
     /* position: absolute; */
     z-index: -500;
 }
 
-
 /* arrows */
-#slides-container .arrow {
+.mss-slides-container .arrow {
     position: absolute;
     top: 0;
     height: 100%;
@@ -32,29 +35,29 @@
     width: 50px;
 }
 
-#slides-container .arrow:hover {
+.mss-slides-container .arrow:hover {
     cursor: pointer;
 
 }
 
-#slides-container .arrow.left {
+.mss-slides-container .arrow.left {
     left: 0;
     background: transparent;
 }
 
-#slides-container .arrow.right {
+.mss-slides-container .arrow.right {
     right: 0;
     background: transparent;
 }
 
-#slides-container .arrow.left:hover {
+.mss-slides-container .arrow.left:hover {
     background: rgba(0, 0, 0, 0.2);
     background: -webkit-linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
     background: -moz-linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
     background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%);
 }
 
-#slides-container .arrow.right:hover {
+.mss-slides-container .arrow.right:hover {
     background: rgba(0, 0, 0, 0.2);
     background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
     background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.5) 100%);
@@ -62,7 +65,7 @@
 }
 
 /** indicators **/
-#slides-container .indicators {
+.mss-slides-container .indicators {
     list-style-type: none;
     position: absolute;
     bottom: 10px;
@@ -75,7 +78,7 @@
     margin: 0;
 }
 
-#slides-container .indicators li {
+.mss-slides-container .indicators li {
     display: -inline-block;
     height: 10px;
     width: 10px;
@@ -84,6 +87,6 @@
     margin: 5px;
 }
 
-#slides-container .indicators li.active {
+.mss-slides-container .indicators li.active {
     background-color: grey;
 }
