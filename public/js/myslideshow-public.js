@@ -119,18 +119,18 @@
 		$(this).find('.arrow.right').on('click', { object: slideShow }, slideShow.nextSlideHelper);
 
 		// setting the interval
-		slideShow.intervalId = setInterval(slideShow.nextSlide, 3000, slideShow);
+		slideShow.intervalId = setInterval(slideShow.nextSlide, 5000, slideShow);
 
 		// stop if hovering
 		$(this).hover(function () {
 			clearInterval(slideShow.intervalId);
 		}, function () {
 			if (slideShow.num_of_slides > 1) {
-				slideShow.intervalId = setInterval(slideShow.nextSlide, 3000, slideShow);
+				slideShow.intervalId = setInterval(slideShow.nextSlide, 5000, slideShow);
 			}
 		});
-	}
 
+	}
 
 
 })(jQuery);
