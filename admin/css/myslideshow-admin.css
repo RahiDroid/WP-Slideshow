@@ -35,14 +35,14 @@
 /****************************
 ---------- Images -----------
 ****************************/
-.images-container {
+#images-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     padding: 20px;
 }
 
-.images-container .image {
+#images-container .image {
     position: relative;
     background-position: center;
     background-size: cover;
@@ -52,28 +52,28 @@
     width: 150px;
 }
 
-.images-container .image.sortable {
+#images-container .image.sortable {
     transition: 0.1s transform linear;
     cursor: all-scroll;
 }
 
-.images-container .image.sortable:hover {
+#images-container .image.sortable:hover {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
 }
 
-.images-container .image span {
+#images-container .image span {
     color: #808080;
 }
 
-.images-container .image.add-image {
+#images-container #add-image {
     display: flex;
     align-items: center;
     justify-content: center;
     border: dashed #808080 3px;
 }
 
-.images-container .image .delete-image {
+#images-container .image .delete-image {
     height: 25px;
     width: 25px;
     right: 0; top: 0;
@@ -84,15 +84,15 @@
     background-color: #FF0000;
 }
 
-.images-container .image .delete-image:hover {
+#images-container .image .delete-image:hover {
     cursor: pointer;
 }
 
-.images-container .image .delete-image span {
+#images-container .image .delete-image span {
     color: #FFF;
 }
 
-.images-container .image .delete-image:hover span {
+#images-container .image .delete-image:hover span {
     animation: 0.5s wiggle-button linear;
 }
 
@@ -133,5 +133,6 @@
 
 .footer span {
     margin-left: 30px;
+    margin-top: 8px;
     display: block;
 }

@@ -40,24 +40,22 @@ function mss_render_settings_page() {
                 
                 <div class="header">
                     <h2>My Slide Show Control Panel</h2>
-                    <span>v1.0.1</span>
+                    <span>v1.0.3</span>
                 </div>
                 
-                <div class="images-container">
-                    <div class="add-image image disable-sort-item">
+                <div id="images-container">
+                    <div id="add-image" class="image disable-sort-item">
                         <span class="dashicons dashicons-plus"></span>
                     </div>
 
                     <?php 
                     // render images from the db
                     for ( $i = 0; $i < $number_of_images; $i++ ) {
-
                         echo '<div class="image sortable" style="background-image: url(' . $urls[ $i ] . ');">
                             <div class="delete-image">
                                 <span class="dashicons dashicons-trash"></span>
                             </div>
                         </div>';
-
                     }
                     
                     ?>
@@ -65,6 +63,7 @@ function mss_render_settings_page() {
 
                 <div class="footer">
                     <span><i><b>Tip: </b>You can drag images to change their order in the slide show!</i></span>
+                    <span><i>Recommended image dimensions: 1000px x 560px</i></span>
                     <button id="btn-save" class="button-primary">Save Changes</button>
                 </div>
 
@@ -88,16 +87,29 @@ function render_mss_shortcode() {
 
     // check if there are any images added in the slideshow or not
     if ( $number_of_images == 0 ) {
-        $html .= '<h5> No images found. You can add images from \'Slideshow Settings\' menu in the admin panel. </h5>';
+        $html .= '<h5> No images found. You can add images in \'Slideshow Settings\' menu in the admin panel. </h5>';
         return $html;
     }
 
     $image_urls = explode( ";", $slides_options[ 'image_urls' ] );
     $html .= '<div id="slides-container">';
+    $html .= '<img class="static-bg" src="'. plugins_url( 'assets/images/default-bg.png' , dirname( __FILE__ ) ) . '"/>';
 
     for ( $i = 0; $i < $number_of_images; $i++ ) {
         $html .= '<img class="slide" src="'. $image_urls[ $i ] . '"/>';
     }
+
+    // arrows
+    $html .= '<div class="arrow left"><img src="' . plugins_url( 'assets/images/arrow-left.png', dirname( __FILE__ ) ) . '"/></div>';
+    $html .= '<div class="arrow right"><img src="' . plugins_url( 'assets/images/arrow-right.png', dirname( __FILE__ ) ) . '"/></div>';
+    
+    // indicators
+    $html .= '<ul class="indicators">';
+    
+    for ( $i = 0; $i < $number_of_images; $i++ ) {
+        $html .= '<li></li>';
+    }
+    $html .= '</ul>';
 
     $html .= '</div>';
 
