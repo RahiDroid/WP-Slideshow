@@ -47,7 +47,7 @@ class Myslideshow_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct($plugin_name, $version) {
 
 		
 		$this->plugin_name = $plugin_name;
@@ -74,7 +74,7 @@ class Myslideshow_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/myslideshow-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/myslideshow-admin.css', array(), $this->version, 'all');
 
 	}
 
@@ -97,57 +97,57 @@ class Myslideshow_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/myslideshow-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/myslideshow-admin.js', array('jquery'), $this->version, false);
 
 	}
 
 	/********* CUSTOM FUNCTIONS START HERE ***********/
-	    /**
-     * Function for our settings page
-     * 
-     * @since    1.0.1
-     */
-    public function mss_settings_page() {
+		/**
+		 * Function for our settings page
+		 * 
+		 * @since    1.0.1
+		 */
+	public function mss_settings_page() {
 
-        /**
-         * for adding the settings page under "Settings" menu
-         * add_options_page( $page_title, $menu_title, $capability, $menu_slug, $function );
-        */
+		/**
+		 * for adding the settings page under "Settings" menu
+		 * add_options_page( $page_title, $menu_title, $capability, $menu_slug, $function );
+		 */
 
-        /**
-         * for adding the page under root menu
-         * add_menu_page( string $page_title, string $menu_title, string $capability,
-         *  string $menu_slug, callable $function = '', string $icon_url = '', int $position = null )
-         */
+		/**
+		 * for adding the page under root menu
+		 * add_menu_page( string $page_title, string $menu_title, string $capability,
+		 *  string $menu_slug, callable $function = '', string $icon_url = '', int $position = null )
+		 */
 
-        //'book_render_settings_page' function in : .../admin/partials/rahi_wpbook-admin-display.php   
-        add_menu_page( __( 'My Slide Show Settings', 'myslideshow' ), __( 'Slideshow Settings', 'myslideshow' ), 'manage_options', 'slideshow-settings', 'mss_render_settings_page',
-            'dashicons-chart-pie', '59' );
+		//'book_render_settings_page' function in : .../admin/partials/rahi_wpbook-admin-display.php   
+		add_menu_page( __( 'My Slide Show Settings', 'myslideshow' ), __( 'Slideshow Settings', 'myslideshow' ), 'manage_options', 'slideshow-settings', 'mss_render_settings_page',
+			'dashicons-chart-pie', '59' );
 	}
 	
 	/**
-     * Function for registering settings
-     * 
-     * @since    1.0.1
-     */
-    function mss_register_settings() {
-        register_setting( 'mss-settings-group', 'mss_settings' );
-    }
+	 * Function for registering settings
+	 * 
+	 * @since    1.0.1
+	 */
+	function mss_register_settings() {
+		register_setting( 'mss-settings-group', 'mss_settings' );
+	}
 
 	/**
-     * Function for adding short code
-     * 
-     * @since    1.0.2
-     */
-    public function mss_add_shortcode(  ) {
+	 * Function for adding short code
+	 * 
+	 * @since    1.0.2
+	 */
+	public function mss_add_shortcode(  ) {
 
-        // function in : .../admin/partials/myslideshow-admin-display.php        
-        return render_mss_shortcode(  );
+		// function in : .../admin/partials/myslideshow-admin-display.php        
+		return render_mss_shortcode(  );
 
-    }
+	}
 
-    function mss_register_shortcodes() {
-        add_shortcode( 'slideshow', array( $this, 'mss_add_shortcode' ) );
-    }
+	function mss_register_shortcodes() {
+		add_shortcode( 'slideshow', array( $this, 'mss_add_shortcode' ) );
+	}
 
 }
