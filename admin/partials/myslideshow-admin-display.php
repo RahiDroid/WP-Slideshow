@@ -20,12 +20,12 @@
 function mss_render_settings_page() {
 
     global $slides_options;
-    $number_of_images = $slides_options[ 'images_number' ];
-    $urls = explode( ";", $slides_options[ 'image_urls' ] );
+    $number_of_images = $slides_options['images_number'];
+    $urls = explode(";", $slides_options['image_urls']);
     
-    if(function_exists( 'wp_enqueue_media' )){
+    if (function_exists('wp_enqueue_media')) {
         wp_enqueue_media();
-    }else{
+    } else {
         wp_enqueue_style('thickbox');
         wp_enqueue_script('media-upload');
         wp_enqueue_script('thickbox');
@@ -34,7 +34,7 @@ function mss_render_settings_page() {
     ?>
         <form id="settings_form" method="post" action="options.php">
             <?php
-        settings_fields( 'mss-settings-group' );
+        settings_fields('mss-settings-group');
         ?>
             <div class="settings-wrapper">
                 
@@ -43,7 +43,7 @@ function mss_render_settings_page() {
                     <span>v1.0.3</span>
                 </div>
 
-                <span><i><?php esc_html_e( 'Recommended image dimensions', 'myslideshow' ); ?>: 1000 X 560</i></span>
+                <span><i><?php esc_html_e('Recommended image dimensions', 'myslideshow'); ?>: 1000 X 560</i></span>
                 
                 <div id="images-container">
                     <div id="add-image" class="image disable-sort-item">
@@ -52,8 +52,8 @@ function mss_render_settings_page() {
 
                     <?php 
                     // render images from the db
-                    for ( $i = 0; $i < $number_of_images; $i++ ) {
-                        echo '<div class="image sortable" style="background-image: url(' . $urls[ $i ] . ');">
+                    for ($i = 0; $i < $number_of_images; $i++) {
+                        echo '<div class="image sortable" style="background-image: url(' . $urls[$i] . ');">
                             <div class="delete-image">
                                 <span class="dashicons dashicons-trash"></span>
                             </div>
@@ -64,9 +64,9 @@ function mss_render_settings_page() {
                 </div>
 
                 <div class="footer">
-                    <span><i><b><?php esc_html_e( 'Tip', 'myslideshow' ); ?>: </b>
-                        <?php esc_html_e( 'You can drag images to change their order in the slide show!', 'myslideshow' ); ?></i></span>
-                    <button id="btn-save" class="button-primary"> <?php _e( 'Save Changes' ); ?></button>
+                    <span><i><b><?php esc_html_e('Tip', 'myslideshow'); ?>: </b>
+                        <?php esc_html_e('You can drag images to change their order in the slide show!', 'myslideshow'); ?></i></span>
+                    <button id="btn-save" class="button-primary"> <?php _e('Save Changes'); ?></button>
                 </div>
 
             </div>  
@@ -85,30 +85,30 @@ function render_mss_shortcode() {
     global $slides_options;
     $html = '';
     
-    $number_of_images = $slides_options[ 'images_number' ];
+    $number_of_images = $slides_options['images_number'];
 
     // check if there are any images added in the slideshow or not
-    if ( $number_of_images == 0 ) {
+    if ($number_of_images == 0) {
         $html .= '<h5> No images found. You can add images in \'Slideshow Settings\' menu in the admin panel. </h5>';
         return $html;
     }
 
-    $image_urls = explode( ";", $slides_options[ 'image_urls' ] );
+    $image_urls = explode(";", $slides_options['image_urls']);
     $html .= '<div class="mss-slides-container">';
-    $html .= '<img class="static-bg" src="'. plugins_url( 'assets/images/default-bg.png' , dirname( __FILE__ ) ) . '"/>';
+    $html .= '<img class="static-bg" src="' . plugins_url('assets/images/default-bg.png', dirname(__FILE__)) . '"/>';
 
-    for ( $i = 0; $i < $number_of_images; $i++ ) {
-        $html .= '<img class="slide" src="'. $image_urls[ $i ] . '"/>';
+    for ($i = 0; $i < $number_of_images; $i++) {
+        $html .= '<img class="slide" src="' . $image_urls[$i] . '"/>';
     }
 
     // arrows
-    $html .= '<div class="arrow left"><img src="' . plugins_url( 'assets/images/arrow-left.png', dirname( __FILE__ ) ) . '"/></div>';
-    $html .= '<div class="arrow right"><img src="' . plugins_url( 'assets/images/arrow-right.png', dirname( __FILE__ ) ) . '"/></div>';
+    $html .= '<div class="arrow left"><img src="' . plugins_url('assets/images/arrow-left.png', dirname(__FILE__)) . '"/></div>';
+    $html .= '<div class="arrow right"><img src="' . plugins_url('assets/images/arrow-right.png', dirname(__FILE__)) . '"/></div>';
     
     // indicators
     $html .= '<ul class="indicators">';
     
-    for ( $i = 0; $i < $number_of_images; $i++ ) {
+    for ($i = 0; $i < $number_of_images; $i++) {
         $html .= '<li></li>';
     }
     $html .= '</ul>';
