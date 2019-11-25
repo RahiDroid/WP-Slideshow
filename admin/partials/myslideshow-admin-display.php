@@ -3,7 +3,7 @@
 /**
  * Provide a admin area view for the plugin
  *
- * This file is used to markup the admin-facing aspects of the plugin.
+ * This file is used to markup the admin-facing aspects of the plugin
  *
  * @link       rahicodes.wordpress.com
  * @since      1.0.0
