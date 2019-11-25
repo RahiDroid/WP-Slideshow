@@ -26,7 +26,7 @@ were provided by rtCamp which can be found [here](https://github.com/rtCamp/hiri
   - `partials`: contains helper functions that render content(mostly contains html and less php) on user side
 - `myslideshow.php`(file): main file from where the execution starts
 
-There are no third party plugins/libraries used and working demo can be found [here](https://rahicodes.000webhostapp.com/2019/11/demonstrates-the-slideshow)
+There are no third party plugins/libraries used and **working demo can be found [here](https://rahicodes.000webhostapp.com/2019/11/demonstrates-the-slideshow)**
 
 ## For users:
 ### Activation: 
