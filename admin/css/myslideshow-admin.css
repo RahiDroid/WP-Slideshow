@@ -42,6 +42,7 @@
 ---------- Images -----------
 ****************************/
 #images-container {
+    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -59,13 +60,15 @@
 }
 
 #images-container .image.sortable {
+    -moz-transition: 0.1s transform linear;
+    -o-transition: 0.1s transform linear;
     transition: 0.1s transform linear;
     cursor: all-scroll;
 }
 
 #images-container .image.sortable:hover {
-    transform: scale(1.1);
     -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #images-container .image span {
@@ -73,6 +76,7 @@
 }
 
 #images-container #add-image {
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,6 +88,7 @@
     width: 25px;
     right: 0; top: 0;
     position: absolute;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,18 +109,23 @@
 
 @keyframes wiggle-button {
     20% {
+        -moz-transform: rotate(30deg);
         transform: rotate(30deg);
     }
     40% {
+        -moz-transform: rotate(-30deg);
         transform: rotate(-30deg);
     }
     60% {
+        -moz-transform: rotate(30deg);
         transform: rotate(30deg);
     }
     80% {
+        -moz-transform: rotate(30deg);
         transform: rotate(30deg);
     }
     100% {
+        -moz-transform: rotate(0deg);
         transform: rotate(0deg);
     }
 }
@@ -124,8 +134,9 @@
 ---------- Footer -----------
 ****************************/
 .footer {
-    display: flex;
     display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
