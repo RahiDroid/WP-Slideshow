@@ -1,4 +1,6 @@
 # MySlideShow
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Tan-007/myslideshow/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Tan-007/myslideshow/?branch=master)
+
 A Simple WordPress plugin which provides you with simple shortcode to help you display a slide show anywhere on your site.
 The plugin was developed during the WordPress training program provided by [rtCamp](https://rtcamp.com/). Requirements for the plugin 
 were provided by rtCamp which can be found [here](https://github.com/rtCamp/hiring-assignments/tree/master/WordPress-Engineer#challenge-2a-wordpress-slideshow-plugin).
@@ -24,7 +26,7 @@ were provided by rtCamp which can be found [here](https://github.com/rtCamp/hiri
   - `partials`: contains helper functions that render content(mostly contains html and less php) on user side
 - `myslideshow.php`(file): main file from where the execution starts
 
-There are no third party plugins/libraries used and working demo can be found [here](link to demo)
+There are no third party plugins/libraries used and working demo can be found [here](https://rahicodes.000webhostapp.com/2019/11/demonstrates-the-slideshow)
 
 ## For users:
 ### Activation: 
