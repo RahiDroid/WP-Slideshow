@@ -121,7 +121,7 @@ class Myslideshow_Admin {
          */
 
         //'book_render_settings_page' function in : .../admin/partials/rahi_wpbook-admin-display.php   
-        add_menu_page( 'My Slide Show Settings', 'Slideshow Settings', 'manage_options', 'slideshow-settings', 'mss_render_settings_page',
+        add_menu_page( __( 'My Slide Show Settings', 'myslideshow' ), __( 'Slideshow Settings', 'myslideshow' ), 'manage_options', 'slideshow-settings', 'mss_render_settings_page',
             'dashicons-chart-pie', '59' );
 	}
 	
@@ -140,48 +140,6 @@ class Myslideshow_Admin {
      * @since    1.0.2
      */
     public function mss_add_shortcode(  ) {
-
-        // $atts = shortcode_atts(
-        //     array( 
-        //         'id'          => '',
-        //         'author_name' => '',
-        //         'year'        => '',
-        //         'category'    => '',
-        //         'tag'         => '',
-        //         'publisher'   => '',
-        //     ), $atts
-        // );
-
-        // I messed it up here
-        // $args = array(
-        //     'post_type'      => 'book',
-        //     'post_status'    => 'publish',
-        //     'posts_per_page' => 999999,
-        //     'order'          => 'ASC',
-        //     'author'         => $atts[ 'author_name' ],
-        // );
-
-        // if ( $atts[ 'category' ] != '' ) {
-        //     $args['tax_query'] = array(
-        //         array(
-        //             'taxonomy' => 'book_category',
-        //             'terms'    => array( $atts[ 'category' ] ),
-        //             'field'    => 'slug',
-        //             'operator' => 'IN',
-        //         ),
-        //     );
-        // }
-
-        // if ( $atts[ 'tag' ] != '' ) {
-        //     $args[ 'tax_query' ] = array(
-        //         array(
-        //             'taxonomy' => 'book_tag',
-        //             'terms'    => array( $atts[ 'tag' ] ),
-        //             'field'    => 'slug',
-        //             'operator' => 'AND',
-        //         ),
-        //     );
-        // }
 
         // function in : .../admin/partials/myslideshow-admin-display.php        
         return render_mss_shortcode(  );

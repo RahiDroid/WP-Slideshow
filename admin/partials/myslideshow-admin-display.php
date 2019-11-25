@@ -43,7 +43,7 @@ function mss_render_settings_page() {
                     <span>v1.0.3</span>
                 </div>
 
-                <span><i>Recommended image dimensions: 1000 X 560</i></span>
+                <span><i><?php esc_html_e( 'Recommended image dimensions', 'myslideshow' ); ?>: 1000 X 560</i></span>
                 
                 <div id="images-container">
                     <div id="add-image" class="image disable-sort-item">
@@ -64,8 +64,9 @@ function mss_render_settings_page() {
                 </div>
 
                 <div class="footer">
-                    <span><i><b>Tip: </b>You can drag images to change their order in the slide show!</i></span>
-                    <button id="btn-save" class="button-primary">Save Changes</button>
+                    <span><i><b><?php esc_html_e( 'Tip', 'myslideshow' ); ?>: </b>
+                        <?php esc_html_e( 'You can drag images to change their order in the slide show!', 'myslideshow' ); ?></i></span>
+                    <button id="btn-save" class="button-primary"> <?php _e( 'Save Changes' ); ?></button>
                 </div>
 
             </div>  
