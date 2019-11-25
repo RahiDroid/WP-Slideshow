@@ -3,8 +3,8 @@ A Simple WordPress plugin which provides you with simple shortcode to help you d
 The plugin was developed during the WordPress training program provided by [rtCamp](https://rtcamp.com/). Requirements for the plugin 
 were provided by rtCamp which can be found [here](https://github.com/rtCamp/hiring-assignments/tree/master/WordPress-Engineer#challenge-2a-wordpress-slideshow-plugin).
 
-- [For Developers](https://github.com/Tan-007/myslideshow/new/master?readme=1#for-developers)
-- [For Users](https://github.com/Tan-007/myslideshow/new/master?readme=1#for-users)
+- [For Developers](https://github.com/Tan-007/myslideshow#for-developers)
+- [For Users](https://github.com/Tan-007/myslideshow#for-users)
 
 ## For developers: 
 ### Here are the main directories/files:
