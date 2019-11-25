@@ -5,6 +5,7 @@ were provided by rtCamp which can be found [here](https://github.com/rtCamp/hiri
 
 - [For Developers](https://github.com/Tan-007/myslideshow#for-developers)
 - [For Users](https://github.com/Tan-007/myslideshow#for-users)
+- [Screenshot(s)](https://github.com/Tan-007/myslideshow#screenshots)
 
 ## For developers: 
 ### Here are the main directories/files:
@@ -24,8 +25,6 @@ were provided by rtCamp which can be found [here](https://github.com/rtCamp/hiri
 - `myslideshow.php`(file): main file from where the execution starts
 
 There are no third party plugins/libraries used and working demo can be found [here](link to demo)
-## Screenshot(s):
-![image-1](https://i.imgur.com/Gq4p6Yl.jpg)
 
 ## For users:
 ### Activation: 
@@ -41,3 +40,6 @@ This plugin is not available on WordPress marketplace hence you will have to man
 2. All you have to do is use the shortcode `[slideshow]`
 3. Before using the shortcode, add images that you want to display on the website in `slideshow settings` available in your admin panel
 4. The shortcode will be usable in comments, excerpts and post content based on your current theme's support
+
+## Screenshot(s):
+![image-1](https://i.imgur.com/Gq4p6Yl.jpg)
