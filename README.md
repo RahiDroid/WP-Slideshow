@@ -44,4 +44,10 @@ This plugin is not available on WordPress marketplace hence you will have to man
 4. The shortcode will be usable in comments, excerpts and post content based on your current theme's support
 
 ## Screenshot(s):
-![image-1](https://i.imgur.com/Gq4p6Yl.jpg)
+The slideshow control panel-
+
+![control panel](https://i.imgur.com/H3Lxkui.png)
+
+Sample slideshow displayed on a post-
+
+![sample](https://i.imgur.com/Gq4p6Yl.jpg)
